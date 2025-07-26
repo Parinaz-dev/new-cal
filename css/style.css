@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    direction: ltr;
+}
+
+
+.parent {
+    display: flex;
+    margin: auto;
+    max-width: 1366px;
+    width: 50%;
+    margin: auto;
+    max-width: 1366px;
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; نوشتنش تفاوتی نداره*/
+}
+
+.up-screen input {
+    width: 250px;
+    height: 50px;
+    outline: 0;
+}
+
+.down-btn {
+    margin-top: 13px;
+    width: 28%;
+}
+
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: center; /*توی evenly مشکل داره  */
+    gap: 10px;
+}
+.first button {
+    width: 45px;
+    height: 40px;
+}
+
+
+.between {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.left button {
+    width: 45px;
+    height: 40px;
+}
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right button {
+    width: 45px;
+    height: 115px;
+}
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.end :nth-child(1) {
+    width: 100px;
+    height: 40px;
+}
+.end button {
+    width: 45px;
+    height: 40px;
+}
