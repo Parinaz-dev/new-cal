@@ -19,10 +19,38 @@ body {
 }
 
 
+
+.btn {
+    /*بعد اینکه فاصله ها درست شد هم border 0 کن هم border-radius بده */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45px;
+    height: 40px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+#plus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+
+
+#plus:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+
 .calculator {
     width: 280px;
     background-color: aliceblue;
     border-radius: 10px;
+    padding: 25px 6px;
 }
 
 
@@ -30,7 +58,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
+
 }
 
 
@@ -38,6 +66,8 @@ body {
     width: 250px;
     height: 50px;
     outline: 0;
+    border-radius: 5px;
+    border: 0;
 }
 
 .down-btn {
@@ -53,10 +83,6 @@ body {
     gap: 10px;
 }
 
-.first button {
-    width: 45px;
-    height: 40px;
-}
 
 
 .between {
@@ -75,11 +101,7 @@ body {
     width: 70%;
 }
 
-.left button {
-    width: 45px;
-    height: 40px;
-    /* flex: 1; */
-}
+
 
 .right {
     display: flex;
