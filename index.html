@@ -38,9 +38,10 @@
           </div>
           <div class="end">
             <button class="btn">0</button>
-            <button class="btn">H</button>
+            <!-- <button class="btn">H</button> -->
             <button class="btn">=</button>
           </div>
+          <div id="history"></div>
         </div>
       </div>
     </div>
@@ -48,12 +49,8 @@
     <script>
       const btn = document.querySelectorAll(".btn");
       const screen = document.getElementById("screen");
-      // const plus = document.getElementById("plus");
       let expression = "";
-
-      // plus.addEventListener("click", function (p) {
-      //   screen.value = plus.textContent;
-      // });
+      const history = document.getElementById("history");
 
       btn.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -68,12 +65,17 @@
             return;
           }
           if (value === "=") {
-            screen.value = eval(expression);
+            const result = eval(expression);
+            screen.value = result;
+            let historyitem = document.createElement("p");
+            historyitem.textContent = `${expression} = ${result}`;
+            history.appendChild(historyitem);
             expression = "";
             return;
           }
+          screen.value = expression;
           expression += value;
-          screen.value += value; // نوشته بودی expression و غلطه
+         
         });
       });
     </script>
