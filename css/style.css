@@ -124,7 +124,7 @@ body {
     height: 40px;
 } */
 
-.history {
+#history {
     display: flex;
     align-items: center;
     justify-content: center;
