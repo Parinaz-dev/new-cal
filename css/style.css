@@ -9,13 +9,30 @@ body {
     display: flex;
     margin: auto;
     max-width: 1366px;
-    width: 50%;
+    width: 100%;
     margin: auto;
     max-width: 1366px;
     align-items: center;
     flex-direction: column;
-    /* justify-content: center; نوشتنش تفاوتی نداره*/
+    justify-content: center;
+    /*نوشتنش تفاوتی نداره*/
 }
+
+
+.calculator {
+    width: 280px;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+
+.up-screen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
 
 .up-screen input {
     width: 250px;
@@ -25,15 +42,17 @@ body {
 
 .down-btn {
     margin-top: 13px;
-    width: 28%;
+    width: 100%;
 }
 
-.first{
+.first {
     display: flex;
     align-items: center;
-    justify-content: center; /*توی evenly مشکل داره  */
+    justify-content: center;
+    /*توی evenly مشکل داره  */
     gap: 10px;
 }
+
 .first button {
     width: 45px;
     height: 40px;
@@ -44,38 +63,48 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
 .left {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 10px;
     flex-wrap: wrap;
+    width: 70%;
 }
+
 .left button {
     width: 45px;
     height: 40px;
+    /* flex: 1; */
 }
+
 .right {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: 30%;
 }
+
 .right button {
     width: 45px;
     height: 115px;
 }
+
 .end {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
+
 .end :nth-child(1) {
     width: 100px;
     height: 40px;
 }
+
 .end button {
     width: 45px;
     height: 40px;
