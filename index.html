@@ -33,7 +33,7 @@
               <button class="btn">3</button>
             </div>
             <div class="right">
-              <button id="plus">+</button>
+              <button id="plus" class="btn">+</button>
             </div>
           </div>
           <div class="end">
@@ -48,28 +48,32 @@
     <script>
       const btn = document.querySelectorAll(".btn");
       const screen = document.getElementById("screen");
-      const plus = document.getElementById("plus");
-      const clear = document.querySelector(".first button:nth-child(1)");
-      const equal = document.querySelector(".end button:nth-child(3)");
+      // const plus = document.getElementById("plus");
+      let expression = "";
 
-      plus.addEventListener("click", function (p) {
-        screen.value = plus.textContent;
-      });
+      // plus.addEventListener("click", function (p) {
+      //   screen.value = plus.textContent;
+      // });
 
       btn.forEach((btn) => {
         btn.addEventListener("click", () => {
           const value = btn.textContent;
           if (value === "H") {
+            expression = "";
             return;
           }
           if (value === "C") {
+            expression = "";
             screen.value = "";
             return;
           }
           if (value === "=") {
+            screen.value = eval(expression);
+            expression = "";
             return;
           }
-          screen.value += btn.textContent;
+          expression += value;
+          screen.value += value; // نوشته بودی expression و غلطه
         });
       });
     </script>
