@@ -124,11 +124,9 @@ body {
     height: 40px;
 } */
 
-/* .history {
+.history {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
-
-} */
+  
+}
