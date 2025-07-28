@@ -50,6 +50,7 @@
       const screen = document.getElementById("screen");
       let expression = "";
       const history = document.getElementById("history");
+      const operators = "+,-,/,*";
 
       btn.forEach((btn) => {
         btn.addEventListener("click", () => {
@@ -67,6 +68,16 @@
             historyitem.textContent = `${expression} = ${result}`;
             history.appendChild(historyitem);
             expression = "";
+            return;
+          }
+
+          const operators = "+-*/";
+
+          if (
+            operators.includes(value) &&
+            operators.includes(expression.at(-1))
+          ) {
+            // نذار اضافه شه چون دو عملگر پشت‌هم شدن
             return;
           }
           expression += value;
