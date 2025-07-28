@@ -17,11 +17,13 @@ body {
 
 .btn {
     /*بعد اینکه فاصله ها درست شد هم border 0 کن هم border-radius بده */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease; */
     width: 45px;
     height: 40px;
-    transition: all 0.2s ease;
     color: black;
+    border: 0;
+    border-radius: 10px;
 }
 
 .btn:hover {
