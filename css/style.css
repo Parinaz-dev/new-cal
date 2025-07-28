@@ -6,10 +6,8 @@ body {
 
 .parent {
     display: flex;
-    margin: auto;
-    max-width: 1366px;
     width: 100%;
-    margin: auto;
+    margin: 10px auto;
     max-width: 1366px;
     align-items: center;
     flex-direction: column;
@@ -70,8 +68,12 @@ body {
 }
 
 .down-btn {
-    margin-top: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 13px; /* میخوام این نباشه ولی نمیشه */
     width: 100%;
+    
 }
 
 .first {
@@ -136,5 +138,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    flex-direction: column;
+    margin-top: 20px;
+}
+#history p {
+    margin: 0;
+    padding: 0;
 }
